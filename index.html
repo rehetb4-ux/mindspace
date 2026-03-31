@@ -1,4 +1,4 @@
-what colors to use <!DOCTYPE html>
+see this <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,21 +8,21 @@ what colors to use <!DOCTYPE html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg: #F7F5F2;
-  --surface: #EFEDE9;
-  --card: #1B2621;
-  --nav-bg: #2D4A3E;
-  --nav-text: #E8F0EC;
-  --nav-accent: #7EC8A4;
-  --text: rgba(247, 245, 242, 0.8);
-  --muted: #6B6560;
-  --primary: #2D4A3E;
-  --accent: #C4875A;
-  --accent2: #7EC8A4;
-  --warm: #C4875A;
-  --warn: #C0473F;
-  --border: rgba(0,0,0,0.08);
-  --border-strong: rgba(0,0,0,0.13);
+  --bg: #F7F5F2;
+  --surface: #EFEDE9;
+  --card: #FFFFFF;
+  --nav-bg: #2D4A3E;
+  --nav-text: #E8F0EC;
+  --nav-accent: #7EC8A4;
+  --text: #1C1C1C;
+  --muted: #6B6560;
+  --primary: #2D4A3E;
+  --accent: #5B8F72;
+  --accent2: #7EC8A4;
+  --warm: #C4875A;
+  --warn: #C0473F;
+  --border: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.13);
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
@@ -30,20 +30,20 @@ body { background: var(--bg); color: var(--text); font-family: 'Geist', sans-ser
 
 /* NAV */
 nav {
-  position: fixed; top: 0; width: 100%; z-index: 200;
-  padding: 0 5vw;
-  display: flex; justify-content: space-between; align-items: center;
-  background: var(--nav-bg);
-  height: 62px;
+  position: fixed; top: 0; width: 100%; z-index: 200;
+  padding: 0 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--nav-bg);
+  height: 62px;
 }
 .logo { font-family: 'Fraunces', serif; font-size: 1.45rem; font-weight: 500; text-decoration: none; color: var(--nav-text); letter-spacing: -0.01em; }
 .logo span { color: var(--nav-accent); }
 .nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
 .nav-links a {
-  text-decoration: none; color: rgba(232,240,236,0.6);
-  font-size: .82rem; font-weight: 400; padding: 0 1.1rem;
-  height: 62px; display: flex; align-items: center; letter-spacing: .02em;
-  border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
+  text-decoration: none; color: rgba(232,240,236,0.6);
+  font-size: .82rem; font-weight: 400; padding: 0 1.1rem;
+  height: 62px; display: flex; align-items: center; letter-spacing: .02em;
+  border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
 }
 .nav-links a:hover { color: var(--nav-text); border-bottom-color: var(--nav-accent); }
 .nav-pill { background: var(--nav-accent) !important; color: var(--primary) !important; border-radius: 6px !important; margin-left: .5rem; padding: 0 1.2rem !important; height: 36px !important; font-weight: 600 !important; border-bottom: none !important; font-size: .8rem !important; }
@@ -219,12 +219,12 @@ footer p { font-size: .72rem; color: rgba(232,240,236,.3); }
 @keyframes dotPulse { 0%,100%{transform:scale(1);opacity:.4;} 50%{transform:scale(1.3);opacity:1;} }
 
 @media(max-width:900px){
-  .nav-links li:not(:last-child) { display: none; }
-  #home { padding: 7rem 1.5rem 3rem; }
-  .about-grid, .chat-layout, .mood-layout, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  section.page-section { padding: 4rem 1.5rem; }
-  .tips-grid, .tiers-grid { grid-template-columns: 1fr; }
-  footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+  .nav-links li:not(:last-child) { display: none; }
+  #home { padding: 7rem 1.5rem 3rem; }
+  .about-grid, .chat-layout, .mood-layout, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  section.page-section { padding: 4rem 1.5rem; }
+  .tips-grid, .tiers-grid { grid-template-columns: 1fr; }
+  footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
 }
 </style>
 </head>
@@ -233,183 +233,366 @@ footer p { font-size: .72rem; color: rgba(232,240,236,.3); }
 <button id="qexit" onclick="window.location.href='https://weather.com'">⚡ Quick Exit</button>
 
 <nav>
-  <a href="#home" class="logo">Mind<span>Space</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#chat-section">AI Chat</a></li>
-    <li><a href="#mood">Mood Tracker</a></li>
-    <li><a href="#tips">Self-Care</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact" class="nav-pill">Get Help</a></li>
-  </ul>
+  <a href="#home" class="logo">Mind<span>Space</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#chat-section">AI Chat</a></li>
+    <li><a href="#mood">Mood Tracker</a></li>
+    <li><a href="#tips">Self-Care</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact" class="nav-pill">Get Help</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
 <section id="home">
-  <div class="hero-inner">
-    <div class="hero-tag">Mental Health Ecosystem · Est. 2025</div>
-    <h1>Your mind<br>deserves <em>care.</em></h1>
-    <p class="hero-sub">Affordable, judgment-free support — combining AI tools, peer community, and real therapists. Because mental health care should be accessible to everyone.</p>
-    <div class="hero-btns">
-      <a href="#chat-section" class="btn-primary">Talk to AI Companion →</a>
-      <a href="#resources" class="btn-ghost">Find Resources</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="num">970M</div><div class="lbl">People living with mental health conditions</div></div>
-      <div class="hstat"><div class="num">75%</div><div class="lbl">Cases untreated in low-income regions</div></div>
-      <div class="hstat"><div class="num">24/7</div><div class="lbl">AI support, always available</div></div>
-    </div>
-  </div>
+  <div class="hero-inner">
+    <div class="hero-tag">Mental Health Ecosystem · Est. 2025</div>
+    <h1>Your mind<br>deserves <em>care.</em></h1>
+    <p class="hero-sub">Affordable, judgment-free support — combining AI tools, peer community, and real therapists. Because mental health care should be accessible to everyone.</p>
+    <div class="hero-btns">
+      <a href="#chat-section" class="btn-primary">Talk to AI Companion →</a>
+      <a href="#resources" class="btn-ghost">Find Resources</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="num">970M</div><div class="lbl">People living with mental health conditions</div></div>
+      <div class="hstat"><div class="num">75%</div><div class="lbl">Cases untreated in low-income regions</div></div>
+      <div class="hstat"><div class="num">24/7</div><div class="lbl">AI support, always available</div></div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="page-section" id="about">
-  <div class="about-grid">
-    <div class="about-body reveal">
-      <div class="s-label">Understanding</div>
-      <h2 class="s-title">What is<br><em>mental health?</em></h2>
-      <p>Mental health is the foundation of how we think, feel, and connect with the world. It shapes every decision we make, every relationship we build, and every challenge we face.</p>
-      <p>Despite its importance, mental health remains deeply misunderstood. Mental illness is not weakness — it's a health condition, just like any other, and it deserves the same care and attention.</p>
-      <p>MindSpace was built to close the gap between people in need and the support they deserve.</p>
-      <a href="#resources" class="btn-primary" style="margin-top:1.2rem;display:inline-block;">Explore Resources →</a>
-    </div>
-    <div class="conditions-grid reveal">
-      <div class="cond-card"><div class="cond-icon">🌧️</div><h4>Depression</h4><p>Persistent low mood and fatigue. Highly treatable with therapy, medication, and lifestyle support.</p><span class="cond-pill">Common</span></div>
-      <div class="cond-card"><div class="cond-icon">⚡</div><h4>Anxiety</h4><p>Excessive worry disrupting daily life. The most prevalent mental health condition worldwide.</p><span class="cond-pill">Most Common</span></div>
-      <div class="cond-card"><div class="cond-icon">🌊</div><h4>PTSD</h4><p>Emotional aftermath of trauma. Trauma-focused therapies are highly effective.</p><span class="cond-pill">Treatable</span></div>
-      <div class="cond-card"><div class="cond-icon">🎭</div><h4>Bipolar Disorder</h4><p>Extreme mood cycles. Managed effectively with medication and structured therapy.</p><span class="cond-pill">Manageable</span></div>
-      <div class="cond-card"><div class="cond-icon">🪞</div><h4>OCD</h4><p>Intrusive thoughts and repetitive behaviors. CBT (ERP) achieves excellent outcomes.</p><span class="cond-pill">Responsive</span></div>
-      <div class="cond-card"><div class="cond-icon">🤝</div><h4>Social Anxiety</h4><p>Fear of social situations. Gradual exposure therapy builds lasting confidence.</p><span class="cond-pill">Common</span></div>
-    </div>
-  </div>
+  <div class="about-grid">
+    <div class="about-body reveal">
+      <div class="s-label">Understanding</div>
+      <h2 class="s-title">What is<br><em>mental health?</em></h2>
+      <p>Mental health is the foundation of how we think, feel, and connect with the world. It shapes every decision we make, every relationship we build, and every challenge we face.</p>
+      <p>Despite its importance, mental health remains deeply misunderstood. Mental illness is not weakness — it's a health condition, just like any other, and it deserves the same care and attention.</p>
+      <p>MindSpace was built to close the gap between people in need and the support they deserve.</p>
+      <a href="#resources" class="btn-primary" style="margin-top:1.2rem;display:inline-block;">Explore Resources →</a>
+    </div>
+    <div class="conditions-grid reveal">
+      <div class="cond-card"><div class="cond-icon">🌧️</div><h4>Depression</h4><p>Persistent low mood and fatigue. Highly treatable with therapy, medication, and lifestyle support.</p><span class="cond-pill">Common</span></div>
+      <div class="cond-card"><div class="cond-icon">⚡</div><h4>Anxiety</h4><p>Excessive worry disrupting daily life. The most prevalent mental health condition worldwide.</p><span class="cond-pill">Most Common</span></div>
+      <div class="cond-card"><div class="cond-icon">🌊</div><h4>PTSD</h4><p>Emotional aftermath of trauma. Trauma-focused therapies are highly effective.</p><span class="cond-pill">Treatable</span></div>
+      <div class="cond-card"><div class="cond-icon">🎭</div><h4>Bipolar Disorder</h4><p>Extreme mood cycles. Managed effectively with medication and structured therapy.</p><span class="cond-pill">Manageable</span></div>
+      <div class="cond-card"><div class="cond-icon">🪞</div><h4>OCD</h4><p>Intrusive thoughts and repetitive behaviors. CBT (ERP) achieves excellent outcomes.</p><span class="cond-pill">Responsive</span></div>
+      <div class="cond-card"><div class="cond-icon">🤝</div><h4>Social Anxiety</h4><p>Fear of social situations. Gradual exposure therapy builds lasting confidence.</p><span class="cond-pill">Common</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- AI CHAT -->
 <section class="page-section" id="chat-section">
-  <div class="chat-layout">
-    <div class="chat-info reveal">
-      <div class="s-label">AI Companion</div>
-      <h2 class="s-title">Talk to<br><em>someone</em><br>anytime.</h2>
-      <p>Mira, our AI companion, helps you vent, reflect, and understand your needs — with zero judgment and complete privacy. A safe space to process before connecting with a human therapist.</p>
-      <div class="privacy-note">
-        <div class="pn-label">Privacy First</div>
-        <p>All conversations are anonymous by default. No account needed. Your words are never sold or shared.</p>
-      </div>
-    </div>
-    <div class="reveal">
-      <div class="chat-box">
-        <div class="chat-header">
-          <div class="chat-avatar">🤗</div>
-          <div class="chat-hinfo">
-            <h4>Mira — AI Companion</h4>
-            <div class="online"><div class="online-dot"></div><span>Online · Always here for you</span></div>
-          </div>
-        </div>
-        <div class="quick-prompts">
-          <button class="qp" onclick="sendQuick(this)">I feel anxious</button>
-          <button class="qp" onclick="sendQuick(this)">I can't sleep</button>
-          <button class="qp" onclick="sendQuick(this)">I feel overwhelmed</button>
-          <button class="qp" onclick="sendQuick(this)">I need to talk</button>
-        </div>
-        <div class="chat-msgs" id="chatMsgs">
-          <div class="msg bot">Hi there 👋 I'm Mira. This is a safe, judgment-free space. How are you feeling today?</div>
-        </div>
-        <div class="chat-input-row">
-          <input class="chat-input" id="chatInp" type="text" placeholder="Share what's on your mind…" onkeydown="if(event.key==='Enter')sendMsg()">
-          <button class="chat-send" onclick="sendMsg()">➤</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="chat-layout">
+    <div class="chat-info reveal">
+      <div class="s-label">AI Companion</div>
+      <h2 class="s-title">Talk to<br><em>someone</em><br>anytime.</h2>
+      <p>Mira, our AI companion, helps you vent, reflect, and understand your needs — with zero judgment and complete privacy. A safe space to process before connecting with a human therapist.</p>
+      <div class="privacy-note">
+        <div class="pn-label">Privacy First</div>
+        <p>All conversations are anonymous by default. No account needed. Your words are never sold or shared.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="chat-avatar">🤗</div>
+          <div class="chat-hinfo">
+            <h4>Mira — AI Companion</h4>
+            <div class="online"><div class="online-dot"></div><span>Online · Always here for you</span></div>
+          </div>
+        </div>
+        <div class="quick-prompts">
+          <button class="qp" onclick="sendQuick(this)">I feel anxious</button>
+          <button class="qp" onclick="sendQuick(this)">I can't sleep</button>
+          <button class="qp" onclick="sendQuick(this)">I feel overwhelmed</button>
+          <button class="qp" onclick="sendQuick(this)">I need to talk</button>
+        </div>
+        <div class="chat-msgs" id="chatMsgs">
+          <div class="msg bot">Hi there 👋 I'm Mira. This is a safe, judgment-free space. How are you feeling today?</div>
+        </div>
+        <div class="chat-input-row">
+          <input class="chat-input" id="chatInp" type="text" placeholder="Share what's on your mind…" onkeydown="if(event.key==='Enter')sendMsg()">
+          <button class="chat-send" onclick="sendMsg()">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- REFRAME -->
 <section class="page-section" id="reframe">
-  <div class="reveal">
-    <div class="s-label">Cognitive Tools</div>
-    <h2 class="s-title">Reframe your<br><em>thoughts.</em></h2>
-    <p style="color:var(--muted);max-width:520px;font-size:.9rem;line-height:1.75;margin-top:.5rem;">Many mental health struggles stem from cognitive distortions — habitual negative thinking patterns. Type a thought below and we'll help you see it differently.</p>
-  </div>
-  <div class="reframe-tool reveal">
-    <h3>Thought Reframing Tool</h3>
-    <p>Type a negative thought below. We'll identify the cognitive distortion and suggest a healthier perspective.</p>
-    <textarea class="thought-input" id="thoughtInput" placeholder="e.g. I always mess everything up. Nobody really likes me. I'll never be good enough…"></textarea>
-    <button class="btn-primary" onclick="reframeThought()">Analyze & Reframe →</button>
-    <div class="reframe-result" id="reframeResult">
-      <div class="distortion-badge" id="distortionBadge">Distortion detected</div>
-      <h4>What's happening in your mind:</h4>
-      <p id="reframeExplain"></p>
-      <div class="reframe-new" id="reframeNew"></div>
-    </div>
-  </div>
+  <div class="reveal">
+    <div class="s-label">Cognitive Tools</div>
+    <h2 class="s-title">Reframe your<br><em>thoughts.</em></h2>
+    <p style="color:var(--muted);max-width:520px;font-size:.9rem;line-height:1.75;margin-top:.5rem;">Many mental health struggles stem from cognitive distortions — habitual negative thinking patterns. Type a thought below and we'll help you see it differently.</p>
+  </div>
+  <div class="reframe-tool reveal">
+    <h3>Thought Reframing Tool</h3>
+    <p>Type a negative thought below. We'll identify the cognitive distortion and suggest a healthier perspective.</p>
+    <textarea class="thought-input" id="thoughtInput" placeholder="e.g. I always mess everything up. Nobody really likes me. I'll never be good enough…"></textarea>
+    <button class="btn-primary" onclick="reframeThought()">Analyze & Reframe →</button>
+    <div class="reframe-result" id="reframeResult">
+      <div class="distortion-badge" id="distortionBadge">Distortion detected</div>
+      <h4>What's happening in your mind:</h4>
+      <p id="reframeExplain"></p>
+      <div class="reframe-new" id="reframeNew"></div>
+    </div>
+  </div>
 </section>
 
 <!-- MOOD -->
 <section class="page-section" id="mood">
-  <div class="s-label reveal">Mood Dashboard</div>
-  <h2 class="s-title reveal">Track your<br><em>wellbeing.</em></h2>
-  <div class="mood-layout">
-    <div class="mood-check reveal">
-      <h3>How are you feeling?</h3>
-      <p>Log your mood to build your personal wellness picture.</p>
-      <div class="mood-emojis">
-        <button class="m-btn" data-l="Great" onclick="selectMood(this,'Great')">😊</button>
-        <button class="m-btn" data-l="Okay" onclick="selectMood(this,'Okay')">😐</button>
-        <button class="m-btn" data-l="Low" onclick="selectMood(this,'Low')">😔</button>
-        <button class="m-btn" data-l="Anxious" onclick="selectMood(this,'Anxious')">😰</button>
-        <button class="m-btn" data-l="Angry" onclick="selectMood(this,'Angry')">😤</button>
-        <button class="m-btn" data-l="Numb" onclick="selectMood(this,'Numb')">😶</button>
-      </div>
-      <div class="mood-sliders">
-        <div class="slider-row"><label>Sleep Quality <span id="sleepVal">6hrs</span></label><input type="range" min="1" max="10" value="6" oninput="document.getElementById('sleepVal').textContent=this.value+'hrs'"></div>
-        <div class="slider-row"><label>Energy Level <span id="energyVal">5/10</span></label><input type="range" min="1" max="10" value="5" oninput="document.getElementById('energyVal').textContent=this.value+'/10'"></div>
-        <div class="slider-row"><label>Stress Level <span id="stressVal">4/10</span></label><input type="range" min="1" max="10" value="4" oninput="document.getElementById('stressVal').textContent=this.value+'/10'"></div>
-      </div>
-      <button class="btn-primary" style="margin-top:1.5rem;width:100%;text-align:center;display:block;" onclick="logMood()">Log Today's Entry</button>
-      <div id="moodMsg"></div>
-    </div>
-    <div class="chart-wrap reveal">
-      <h3>Your 7-Day Wellness Trend</h3>
-      <canvas id="moodChart" height="200"></canvas>
-    </div>
-  </div>
+  <div class="s-label reveal">Mood Dashboard</div>
+  <h2 class="s-title reveal">Track your<br><em>wellbeing.</em></h2>
+  <div class="mood-layout">
+    <div class="mood-check reveal">
+      <h3>How are you feeling?</h3>
+      <p>Log your mood to build your personal wellness picture.</p>
+      <div class="mood-emojis">
+        <button class="m-btn" data-l="Great" onclick="selectMood(this,'Great')">😊</button>
+        <button class="m-btn" data-l="Okay" onclick="selectMood(this,'Okay')">😐</button>
+        <button class="m-btn" data-l="Low" onclick="selectMood(this,'Low')">😔</button>
+        <button class="m-btn" data-l="Anxious" onclick="selectMood(this,'Anxious')">😰</button>
+        <button class="m-btn" data-l="Angry" onclick="selectMood(this,'Angry')">😤</button>
+        <button class="m-btn" data-l="Numb" onclick="selectMood(this,'Numb')">😶</button>
+      </div>
+      <div class="mood-sliders">
+        <div class="slider-row"><label>Sleep Quality <span id="sleepVal">6hrs</span></label><input type="range" min="1" max="10" value="6" oninput="document.getElementById('sleepVal').textContent=this.value+'hrs'"></div>
+        <div class="slider-row"><label>Energy Level <span id="energyVal">5/10</span></label><input type="range" min="1" max="10" value="5" oninput="document.getElementById('energyVal').textContent=this.value+'/10'"></div>
+        <div class="slider-row"><label>Stress Level <span id="stressVal">4/10</span></label><input type="range" min="1" max="10" value="4" oninput="document.getElementById('stressVal').textContent=this.value+'/10'"></div>
+      </div>
+      <button class="btn-primary" style="margin-top:1.5rem;width:100%;text-align:center;display:block;" onclick="logMood()">Log Today's Entry</button>
+      <div id="moodMsg"></div>
+    </div>
+    <div class="chart-wrap reveal">
+      <h3>Your 7-Day Wellness Trend</h3>
+      <canvas id="moodChart" height="200"></canvas>
+    </div>
+  </div>
 </section>
 
 <!-- TIPS -->
 <section class="page-section" id="tips">
-  <div class="reveal">
-    <div class="s-label">Self-Care</div>
-    <h2 class="s-title">Daily habits for a<br><em>healthier mind.</em></h2>
-  </div>
-  <div class="tips-grid">
-    <div class="tip-card reveal"><span class="tip-num">01</span><h4>Move Your Body</h4><p>Just 20–30 minutes of daily movement releases endorphins. A walk counts. Consistency beats intensity.</p></div>
-    <div class="tip-card reveal"><span class="tip-num">02</span><h4>Protect Your Sleep</h4><p>7–9 hours of quality sleep is non-negotiable. Create a wind-down routine and keep a consistent schedule.</p></div>
-    <div class="tip-card reveal"><span class="tip-num">03</span><h4>Mindful Breathing</h4><p>The 4-7-8 technique (inhale 4s, hold 7s, exhale 8s) activates your parasympathetic nervous system in minutes.</p></div>
-    <div class="tip-card reveal"><span class="tip-num">04</span><h4>Limit Doom-Scrolling</h4><p>Set a 30-minute daily social media limit. Replace one scroll session with something that fills your cup.</p></div>
-    <div class="tip-card reveal"><span class="tip-num">05</span><h4>Connect Authentically</h4><p>Deep conversations are more restorative than many shallow ones. Quality matters more than quantity.</p></div>
-    <div class="tip-card reveal"><span class="tip-num">06</span><h4>Journal Your Thoughts</h4><p>Writing externalizes your thoughts, reducing their weight. Even 5 minutes a day creates meaningful clarity.</p></div>
-  </div>
+  <div class="reveal">
+    <div class="s-label">Self-Care</div>
+    <h2 class="s-title">Daily habits for a<br><em>healthier mind.</em></h2>
+  </div>
+  <div class="tips-grid">
+    <div class="tip-card reveal"><span class="tip-num">01</span><h4>Move Your Body</h4><p>Just 20–30 minutes of daily movement releases endorphins. A walk counts. Consistency beats intensity.</p></div>
+    <div class="tip-card reveal"><span class="tip-num">02</span><h4>Protect Your Sleep</h4><p>7–9 hours of quality sleep is non-negotiable. Create a wind-down routine and keep a consistent schedule.</p></div>
+    <div class="tip-card reveal"><span class="tip-num">03</span><h4>Mindful Breathing</h4><p>The 4-7-8 technique (inhale 4s, hold 7s, exhale 8s) activates your parasympathetic nervous system in minutes.</p></div>
+    <div class="tip-card reveal"><span class="tip-num">04</span><h4>Limit Doom-Scrolling</h4><p>Set a 30-minute daily social media limit. Replace one scroll session with something that fills your cup.</p></div>
+    <div class="tip-card reveal"><span class="tip-num">05</span><h4>Connect Authentically</h4><p>Deep conversations are more restorative than many shallow ones. Quality matters more than quantity.</p></div>
+    <div class="tip-card reveal"><span class="tip-num">06</span><h4>Journal Your Thoughts</h4><p>Writing externalizes your thoughts, reducing their weight. Even 5 minutes a day creates meaningful clarity.</p></div>
+  </div>
 </section>
 
 <!-- RESOURCES -->
 <section class="page-section" id="resources">
-  <div class="reveal">
-    <div class="s-label">Help & Support</div>
-    <h2 class="s-title">You're not<br><em>alone.</em></h2>
-  </div>
-  <div class="emergency-banner reveal">
-    <div><strong>🆘 In Crisis? Get Immediate Help</strong><br><span>Free, confidential support available 24/7 — no judgment, no questions asked.</span></div>
-    <div class="emrg-num">iCall: 9152987821</div>
-  </div>
-  <div class="resources-grid">
-    <div class="res-card reveal"><span class="res-type">Crisis Helpline</span><h4>iCall</h4><p>Free, confidential counselling by trained professionals. Mon–Sat, 8am–10pm IST.</p><div class="res-contact">📞 9152987821</div></div>
-    <div class="res-card reveal"><span class="res-type">24/7 Helpline</span><h4>Vandrevala Foundation</h4><p>Round-the-clock support in Hindi and English.</p><div class="res-contact">📞 1860-2662-345</div></div>
-    <div class="res-card reveal"><span class="res-type">Suicide Prevention</span><h4>AASRA</h4><p>India's leading suicide prevention helpline, available 24 hours every day.</p><div class="res-contact">📞 9820466627</div></div>
-    <div class="res-card reveal"><span class="res-type">Youth Support</span><h4>YourDOST</h4><p>Online counselling for students and young professionals.</p><div class="res-contact">🌐 yourdost.com</div></div>
-    <div class="res-card reveal"><span class="res-type">Women's Support</span><h4>Snehi</h4><p>Emotional support and counselling for women experiencing mental health challenges.</p><div class="res-contact">📞 044-24640050</div></div>
-    <div class="res-card reveal"><span class="res-type">LGBTQ+ Support</span><h4>Arpita Suicide Hotline</h4><p>Safe, inclusive support for LGBTQ+ individuals facing mental health crises.</p><div class="res-contact">📞 080-23655557</div></div>
-  </div>
+  <div class="reveal">
+    <div class="s-label">Help & Support</div>
+    <h2 class="s-title">You're not<br><em>alone.</em></h2>
+  </div>
+  <div class="emergency-banner reveal">
+    <div><strong>🆘 In Crisis? Get Immediate Help</strong><br><span>Free, confidential support available 24/7 — no judgment, no questions asked.</span></div>
+    <div class="emrg-num">iCall: 9152987821</div>
+  </div>
+  <div class="resources-grid">
+    <div class="res-card reveal"><span class="res-type">Crisis Helpline</span><h4>iCall</h4><p>Free, confidential counselling by trained professionals. Mon–Sat, 8am–10pm IST.</p><div class="res-contact">📞 9152987821</div></div>
+    <div class="res-card reveal"><span class="res-type">24/7 Helpline</span><h4>Vandrevala Foundation</h4><p>Round-the-clock support in Hindi and English.</p><div class="res-contact">📞 1860-2662-345</div></div>
+    <div class="res-card reveal"><span class="res-type">Suicide Prevention</span><h4>AASRA</h4><p>India's leading suicide prevention helpline, available 24 hours every day.</p><div class="res-contact">📞 9820466627</div></div>
+    <div class="res-card reveal"><span class="res-type">Youth Support</span><h4>YourDOST</h4><p>Online counselling for students and young professionals.</p><div class="res-contact">🌐 yourdost.com</div></div>
+    <div class="res-card reveal"><span class="res-type">Women's Support</span><h4>Snehi</h4><p>Emotional support and counselling for women experiencing mental health challenges.</p><div class="res-contact">📞 044-24640050</div></div>
+    <div class="res-card reveal"><span class="res-type">LGBTQ+ Support</span><h4>Arpita Suicide Hotline</h4><p>Safe, inclusive support for LGBTQ+ individuals facing mental health crises.</p><div class="res-contact">📞 080-23655557</div></div>
+  </div>
 
-  <div style="margin-top:4.5rem;" class="reveal">
-    <div class="s-label">Access Tiers</div>
-    <h2 class="s-title">Support
+  <div style="margin-top:4.5rem;" class="reveal">
+    <div class="s-label">Access Tiers</div>
+    <h2 class="s-title">Support that fits<br>your <em>budget.</em></h2>
+  </div>
+  <div class="tiers-grid reveal">
+    <div class="tier-card">
+      <div class="tier-name">Free</div>
+      <div class="tier-price">₹0<sub>/mo</sub></div>
+      <div class="tier-period">Always free, no credit card</div>
+      <ul class="tier-features"><li>AI Companion (Mira)</li><li>Mood & Wellness Tracker</li><li>Cognitive Reframing Tool</li><li>Community Safe-Circles</li><li>Crisis Helpline Directory</li></ul>
+      <a href="#contact" class="btn-ghost" style="display:block;text-align:center;">Get Started</a>
+    </div>
+    <div class="tier-card featured">
+      <div class="tier-name">Group Care</div>
+      <div class="tier-price">₹499<sub>/mo</sub></div>
+      <div class="tier-period">Group sessions of 8–10 people</div>
+      <ul class="tier-features"><li>Everything in Free</li><li>Weekly group therapy sessions</li><li>Smart therapist matching</li><li>Session recordings & notes</li><li>Guided meditation library</li></ul>
+      <a href="#contact" class="btn-primary" style="display:block;text-align:center;">Start Free Trial</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">1-on-1 Care</div>
+      <div class="tier-price">₹1,299<sub>/mo</sub></div>
+      <div class="tier-period">Private video sessions</div>
+      <ul class="tier-features"><li>Everything in Group Care</li><li>2× private video sessions</li><li>Personalized care plan</li><li>Between-session messaging</li><li>Sliding scale available</li></ul>
+      <a href="#contact" class="btn-ghost" style="display:block;text-align:center;">Book Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="s-label">Get In Touch</div>
+      <h2 class="s-title">Ready to take<br>the <em>first step?</em></h2>
+      <p>Whether you need support, want to join as a therapist, or are an institution looking for a wellness solution — we're here. No judgment. No pressure.</p>
+      <div class="contact-detail"><div class="cd-icon">📧</div><div class="cd-body"><strong>Email</strong>hello@mindspace.in</div></div>
+      <div class="contact-detail"><div class="cd-icon">📞</div><div class="cd-body"><strong>Call / WhatsApp</strong>+91 98765 43210</div></div>
+      <div class="contact-detail"><div class="cd-icon">🔒</div><div class="cd-body"><strong>Anonymous Form</strong>No name required. We'll respond to any email you provide.</div></div>
+    </div>
+    <div class="reveal">
+      <div class="form-group"><label>Your Name (optional)</label><input type="text" id="fname" placeholder="Anonymous is fine"></div>
+      <div class="form-group"><label>Email (optional)</label><input type="email" id="femail" placeholder="For us to respond"></div>
+      <div class="form-group"><label>I'm reaching out as a…</label><select id="ftype"><option value="">Select one</option><option>Someone seeking support</option><option>University / Organisation</option><option>Therapist wanting to join</option><option>Press / Media</option><option>Just curious</option></select></div>
+      <div class="form-group"><label>Message</label><textarea id="fmsg" placeholder="Share what's on your mind, or what you're looking for…"></textarea></div>
+      <button class="btn-primary" style="width:100%;text-align:center;display:block;" onclick="submitForm()">Send Message →</button>
+      <div class="form-success" id="formSuccess">✅ Thank you for reaching out. We'll respond within 24 hours. You're brave for taking this step.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#home" class="logo">Mind<span>Space</span></a>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>© 2026 MindSpace. Mental health is a right, not a privilege.</p>
+</footer>
+
+<script>
+// Scroll Reveal
+const revEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.08 });
+revEls.forEach(el => obs.observe(el));
+
+// Chat
+const chatResponses = {
+  anxious: "I hear you — anxiety can feel really overwhelming. 💙 Let's try something together: breathe in for 4 counts, hold for 4, and out for 6. You're safe right now. Would you like to talk about what's causing it, or would grounding techniques help?",
+  sleep: "Poor sleep and mental health are deeply connected. Some things that genuinely help: avoid screens an hour before bed, keep a consistent sleep time, and try writing down tomorrow's worries so your brain can let them go.",
+  overwhelmed: "Feeling overwhelmed is your mind telling you it's carrying too much. What's the single biggest thing weighing on you right now? Naming it often takes away some of its power. I'm here. 💙",
+  talk: "I'm glad you reached out. You don't need a specific problem to talk — sometimes you just need space to be heard, and that's completely valid. What's been on your mind?",
+  default: [
+    "That sounds really hard, and your feelings are completely valid. Tell me more — I'm listening. 💙",
+    "I'm here with you. It takes courage to reach out. What's been weighing on you most?",
+    "You're not alone in this. What would feel most helpful right now — venting, coping strategies, or finding professional help?",
+    "Thank you for trusting me with this. Can you tell me more about what you're experiencing?"
+  ]
+};
+let msgCount = 0;
+function sendMsg(){
+  const inp = document.getElementById('chatInp');
+  const val = inp.value.trim();
+  if(!val) return;
+  addMsg(val, 'user'); inp.value = '';
+  const lower = val.toLowerCase();
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    let resp;
+    if(lower.includes('anxi')||lower.includes('nervous')||lower.includes('panic')) resp = chatResponses.anxious;
+    else if(lower.includes('sleep')||lower.includes('tired')||lower.includes('insomnia')) resp = chatResponses.sleep;
+    else if(lower.includes('overwhelm')||lower.includes('too much')||lower.includes('stress')) resp = chatResponses.overwhelmed;
+    else if(lower.includes('talk')||lower.includes('listen')||lower.includes('someone')) resp = chatResponses.talk;
+    else resp = chatResponses.default[msgCount % chatResponses.default.length];
+    msgCount++;
+    addMsg(resp, 'bot');
+    if(msgCount >= 3) setTimeout(() => addMsg("If you'd like to speak with a real counsellor, helplines are listed in the Resources section below. You can also book a session with one of our therapists anytime. 🤝", 'bot'), 800);
+  }, 1200);
+}
+function sendQuick(btn){ document.getElementById('chatInp').value = btn.textContent; sendMsg(); }
+function addMsg(text, role){
+  const msgs = document.getElementById('chatMsgs');
+  const div = document.createElement('div');
+  div.className = 'msg ' + role; div.textContent = text;
+  msgs.appendChild(div); msgs.scrollTop = msgs.scrollHeight;
+}
+function showTyping(){
+  const msgs = document.getElementById('chatMsgs');
+  const div = document.createElement('div');
+  div.className = 'msg typing'; div.id = 'typing';
+  div.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+  msgs.appendChild(div); msgs.scrollTop = msgs.scrollHeight;
+}
+function removeTyping(){ const t = document.getElementById('typing'); if(t) t.remove(); }
+
+// Reframe
+const distortions = [
+  { keys:['always','never','every','all','none','nobody','everyone'], type:'All-or-Nothing Thinking', explain:'You\'re thinking in absolutes — "always", "never", "everyone". Real situations are rarely this black and white. This pattern causes unnecessary suffering because it ignores evidence of nuance and progress.', reframe:'I sometimes struggle, and that\'s human. I\'ve also handled challenges well before. Progress, not perfection, is what matters.' },
+  { keys:['nobody likes','no one cares','they all hate','worthless','useless'], type:'Mind Reading & Labelling', explain:'You\'re assuming you know what others think, or applying a permanent negative label to yourself. One moment doesn\'t define who you are.', reframe:'I can\'t know for certain what others think. One difficult moment doesn\'t erase my worth or all the good I\'ve done.' },
+  { keys:['never be good enough','not good enough','failure','loser','stupid'], type:'Overgeneralization', explain:'You\'re taking one negative experience and projecting it as a permanent pattern — drawing a sweeping conclusion from limited evidence.', reframe:'I\'m finding this challenging right now, but difficulty in one area doesn\'t mean I\'m failing overall. I have strengths, and I\'m learning.' },
+  { keys:['everything','ruin','disaster','worst','terrible','horrible'], type:'Catastrophizing', explain:'You\'re imagining the worst possible outcome and treating it as inevitable. This amplifies anxiety and makes problems seem much larger than they are.', reframe:'This is difficult, but the worst case rarely happens. I\'ve gotten through hard things before, and I can handle this too.' },
+];
+function reframeThought(){
+  const t = document.getElementById('thoughtInput').value.toLowerCase();
+  if(!t.trim()) return;
+  let matched = distortions[distortions.length-1];
+  for(const d of distortions){ if(d.keys.some(k=>t.includes(k))){ matched=d; break; } }
+  document.getElementById('distortionBadge').textContent = '⚠ ' + matched.type + ' detected';
+  document.getElementById('reframeExplain').textContent = matched.explain;
+  document.getElementById('reframeNew').textContent = '"' + matched.reframe + '"';
+  const res = document.getElementById('reframeResult');
+  res.style.display='block'; res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// Mood
+function selectMood(btn){ document.querySelectorAll('.m-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); }
+function logMood(){
+  const active = document.querySelector('.m-btn.active');
+  const mood = active ? active.getAttribute('data-l') : null;
+  const msgs = { 'Great':'You\'re doing well. Keep it up. Entry logged. 🌟', 'Okay':'Neutral days are normal. Entry saved. 💙', 'Low':'It\'s okay to not be okay. Your feelings are valid. Consider reaching out to someone you trust today.', 'Anxious':'Anxiety is tough. Try 4-7-8 breathing right now. Entry saved.', 'Angry':'Anger is valid. Journaling or physical movement can help process it. Entry logged. 💪', 'Numb':'Numbness can signal you need rest or support. Entry saved. Please be gentle with yourself today.' };
+  const msgEl = document.getElementById('moodMsg');
+  msgEl.textContent = mood ? msgs[mood] : 'Entry logged. Thank you for checking in with yourself today. 💙';
+  msgEl.style.display='block';
+}
+
+// Chart
+window.addEventListener('load', () => {
+  const ctx = document.getElementById('moodChart').getContext('2d');
+  new Chart(ctx, {
+    type:'line',
+    data:{
+      labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+      datasets:[
+        {label:'Mood',data:[5,4,6,5,7,8,7],borderColor:'#2D4A3E',backgroundColor:'rgba(45,74,62,.06)',fill:true,tension:0.4,pointBackgroundColor:'#2D4A3E',pointRadius:4},
+        {label:'Sleep',data:[6,5,7,6,8,7,8],borderColor:'#7EC8A4',backgroundColor:'rgba(126,200,164,.06)',fill:true,tension:0.4,pointBackgroundColor:'#7EC8A4',pointRadius:4},
+        {label:'Energy',data:[4,3,5,6,7,8,6],borderColor:'#C4875A',backgroundColor:'rgba(196,135,90,.05)',fill:true,tension:0.4,pointBackgroundColor:'#C4875A',pointRadius:4},
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{legend:{labels:{color:'#6B6560',font:{family:'Geist',size:11}}}},
+      scales:{
+        x:{grid:{color:'rgba(0,0,0,.05)'},ticks:{color:'#6B6560',font:{family:'Geist'}}},
+        y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{color:'#6B6560',font:{family:'Geist'}},min:0,max:10}
+      }
+    }
+  });
+});
+
+// Form
+function submitForm(){
+  const msg = document.getElementById('fmsg').value.trim();
+  if(!msg){ alert('Please share your message first.'); return; }
+  document.getElementById('formSuccess').style.display='block';
+  document.getElementById('fmsg').value='';
+  document.getElementById('fname').value='';
+  document.getElementById('femail').value='';
+}
+</script>
+</body>
+</html>
