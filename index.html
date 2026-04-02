@@ -13,79 +13,59 @@
   --surface: #DCF0E2;
   --surface2: #CDEBD6;
   --card: #F8F4E8;
-  --card2: #F7FBF8;
   --text: #0F2B1A;
-  --text2: #1a3a27;
   --muted: #4a6b57;
   --primary: #2A7A4B;
-  --primary2: #1E5E38;
   --accent: #4CAF72;
-  --accent2: #38976A;
   --mint: #A8D5B5;
   --forest: #1B5E20;
   --warn: #C0392B;
-  --gold: #C8A84B;
-  --backgroudpl: #D73535;
   --border: rgba(42,122,75,0.15);
-  --border2: rgba(42,122,75,0.25);
   --glow: rgba(42,122,75,0.25);
   --shadow: rgba(15,43,26,0.12);
-  --nav-h: 72px;
   --card-radius: 20px;
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;line-height:1.65;font-size:18px;position:relative;}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.65;}
-::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px;}
-nav{position:fixed;top:0;width:100%;z-index:500;padding:0 5vw;display:flex;justify-content:space-between;align-items:center;height:var(--nav-h);background:#2A7A4B;backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.1);}
-.logo{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.55rem;letter-spacing:-0.02em;}
-.logo-dot{width:10px;height:10px;background:var(--mint);border-radius:50%;box-shadow:0 0 12px rgba(168,213,181,0.7);animation:pdot 2.5s ease infinite;}
-@keyframes pdot{0%,100%{transform:scale(1);}50%{transform:scale(1.35);}}
-.logo span{color:var(--mint);}
-.nav-links{display:flex;gap:0;list-style:none;align-items:center;}
-.nav-links a{text-decoration:none;color:rgba(255,255,255,0.85);font-size:1rem;font-weight:600;padding:0 1.1rem;height:var(--nav-h);display:flex;align-items:center;border-bottom:3px solid transparent;transition:all .25s;}
-.nav-links a:hover{color:#fff;border-bottom-color:var(--mint);}
-.nav-pill{background:#fff!important;color:var(--primary)!important;border-radius:50px!important;padding:.6rem 1.8rem!important;font-weight:700!important;margin-left:1rem;box-shadow:0 5px 20px rgba(0,0,0,0.18);transition:all .25s;}
-.nav-pill:hover{background:var(--backgroudpl)!important;color:#fff!important;transform:translateY(-2px);}
-
-/* Enhanced Cards */
-.card-beauty{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--card-radius);
-  padding:2.1rem;
-  transition:all .35s cubic-bezier(0.4,0,0.2,1);
-  box-shadow:0 10px 30px var(--shadow);
-  position:relative;
-  overflow:hidden;
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.65; font-size:18px; overflow-x:hidden; position:relative;
 }
-.card-beauty::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent),var(--teal));transform:scaleX(0);transition:transform .4s;}
-.card-beauty:hover{transform:translateY(-10px);box-shadow:0 25px 55px var(--glow);}
-.card-beauty:hover::before{transform:scaleX(1);}
+body::before {
+  content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E"); pointer-events:none; z-index:9999; opacity:0.65;
+}
+nav {
+  position:fixed; top:0; width:100%; z-index:500; padding:0 5vw; height:72px; background:#2A7A4B; display:flex; align-items:center; justify-content:space-between; backdrop-filter:blur(20px);
+}
+.logo { font-family:'Playfair Display',serif; font-size:1.85rem; font-weight:700; color:#fff; display:flex; align-items:center; gap:0.55rem; }
+.logo-dot { width:10px; height:10px; background:var(--mint); border-radius:50%; animation:pdot 2.5s infinite; }
+@keyframes pdot { 50% { transform:scale(1.35); } }
+.nav-links a { color:rgba(255,255,255,0.9); padding:0 1.1rem; font-weight:600; text-decoration:none; height:72px; display:flex; align-items:center; }
+.nav-pill { background:#fff; color:var(--primary); border-radius:50px; padding:0.6rem 1.8rem; font-weight:700; box-shadow:0 5px 20px rgba(0,0,0,0.18); }
 
-section.page-section{padding:7rem 5vw;position:relative;overflow:hidden;}
-.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;opacity:0.7;}
-.s-label{font-size:.88rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem;}
-.s-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,4vw,4.4rem);font-weight:700;letter-spacing:-.025em;line-height:1.06;margin-bottom:1.3rem;color:var(--text);}
-h1{font-family:'Playfair Display',serif;font-size:clamp(3.6rem,6vw,7rem);font-weight:700;line-height:1.0;letter-spacing:-0.03em;margin-bottom:1.7rem;color:var(--text);}
-.btn-primary{background:var(--primary);color:#fff;border:none;padding:1.15rem 2.5rem;border-radius:12px;font-weight:600;font-size:1.06rem;transition:all .3s;box-shadow:0 6px 25px var(--glow);}
-.btn-primary:hover{background:var(--backgroudpl);transform:translateY(-3px);}
+/* Premium Cards */
+.card-beauty {
+  background:var(--card); border:1px solid var(--border); border-radius:var(--card-radius); padding:2.1rem; box-shadow:0 10px 30px var(--shadow);
+  transition:all .35s cubic-bezier(0.4,0,0.2,1); position:relative; overflow:hidden;
+}
+.card-beauty::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--primary),var(--accent)); transform:scaleX(0); transition:transform .4s;
+}
+.card-beauty:hover { transform:translateY(-10px); box-shadow:0 25px 55px var(--glow); }
+.card-beauty:hover::before { transform:scaleX(1); }
 
-/* Hero Visual */
-.hero-visual{width:460px;display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;}
-.hv-card.card-beauty{height:195px;display:flex;flex-direction:column;justify-content:flex-start;}
-
-/* Other sections use card-beauty for consistency */
+section { padding:7rem 5vw; position:relative; }
+.orb { position:absolute; border-radius:50%; filter:blur(100px); opacity:0.7; pointer-events:none; }
+.s-title { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,5vw,4.4rem); font-weight:700; line-height:1.06; }
+.btn-primary { background:var(--primary); color:#fff; padding:1.15rem 2.5rem; border-radius:12px; font-weight:600; transition:all .3s; }
+.btn-primary:hover { background:#D73535; transform:translateY(-3px); }
 </style>
 </head>
 <body>
 
-<button id="qexit" onclick="window.location.href='https://weather.com'" style="position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--warn);color:#fff;border:none;border-radius:12px;padding:.8rem 1.8rem;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(192,57,43,0.4);">⚡ Quick Exit</button>
+<button id="qexit" onclick="window.location.href='https://weather.com'" style="position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--warn);color:#fff;border:none;border-radius:12px;padding:0.8rem 1.8rem;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(192,57,43,0.4);">⚡ Quick Exit</button>
 
 <nav>
   <a href="#home" class="logo"><div class="logo-dot"></div>Mind<span>Space</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" style="display:flex;list-style:none;gap:1.5rem;">
     <li><a href="#about">About</a></li>
     <li><a href="#breathe">Breathe</a></li>
     <li><a href="#chat-section">Talk to Mira</a></li>
@@ -99,169 +79,160 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(3.6rem,6vw,7rem);font-we
 </nav>
 
 <!-- HERO -->
-<section id="home" style="min-height:100vh;display:flex;align-items:center;padding:9rem 5vw 6rem;position:relative;">
-  <div class="orb" style="width:720px;height:720px;background:rgba(200,168,75,0.12);top:-180px;right:-140px;"></div>
-  <div class="orb" style="width:520px;height:520px;background:rgba(76,175,114,0.11);bottom:-120px;left:-100px;"></div>
-  
-  <div style="max-width:720px;position:relative;z-index:2;">
-    <div class="hero-badge" style="margin-bottom:2rem;"><div class="badge-dot"></div>Mental Health Ecosystem · Made with Care in India</div>
-    <h1>Your mind<br>deserves <em>gentle care.</em></h1>
-    <p style="font-size:1.28rem;max-width:580px;margin-bottom:3rem;">Free AI tools, breathing exercises, private journaling, mood tracking & affordable support. Because feeling better should never feel out of reach.</p>
+<section id="home" style="min-height:100vh;display:flex;align-items:center;position:relative;">
+  <div class="orb" style="width:720px;height:720px;background:rgba(200,168,75,0.14);top:-180px;right:-140px;"></div>
+  <div class="orb" style="width:520px;height:520px;background:rgba(76,175,114,0.12);bottom:-140px;left:-100px;"></div>
+
+  <div style="max-width:720px;z-index:2;">
+    <div style="background:rgba(42,122,75,0.08);border:1px solid rgba(42,122,75,0.2);border-radius:50px;padding:0.5rem 1.4rem;display:inline-flex;align-items:center;gap:0.6rem;margin-bottom:2rem;">
+      <div style="width:8px;height:8px;background:#4CAF72;border-radius:50%;"></div>
+      Mental Health Ecosystem • Made with Care in India
+    </div>
+    <h1 style="font-size:clamp(3.6rem,7vw,7rem);">Your mind<br>deserves <em>gentle care.</em></h1>
+    <p style="font-size:1.28rem;max-width:580px;margin:2rem 0 3rem;">Free AI companion, breathing tools, private journaling, mood tracking & affordable real support. Because feeling better should be accessible to everyone.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;">
       <a href="#chat-section" class="btn-primary">Talk to Mira Now →</a>
-      <a href="#breathe" class="btn-primary" style="background:transparent;border:2px solid var(--primary);color:var(--primary);">Try Breathing Exercise</a>
+      <a href="#breathe" class="btn-primary" style="background:transparent;border:2px solid var(--primary);color:var(--primary);">Start Breathing</a>
     </div>
   </div>
 
-  <div class="hero-visual" style="position:absolute;right:5vw;top:50%;transform:translateY(-50%);">
-    <div class="hv-card card-beauty"><span style="font-size:2.6rem;margin-bottom:0.8rem;display:block;">🤗</span><h4>Mira — AI Companion</h4><p>Always here. Never judges.</p></div>
-    <div class="hv-card card-beauty"><span style="font-size:2.6rem;margin-bottom:0.8rem;display:block;">🌬️</span><h4>Guided Breathing</h4><p>Calm your mind in minutes.</p></div>
-    <div class="hv-card card-beauty"><span style="font-size:2.6rem;margin-bottom:0.8rem;display:block;">📓</span><h4>Private Journal</h4><p>Your thoughts stay yours.</p></div>
-    <div class="hv-card card-beauty"><span style="font-size:2.6rem;margin-bottom:0.8rem;display:block;">📊</span><h4>Mood Tracker</h4><p>See your growth clearly.</p></div>
+  <div style="position:absolute;right:5vw;top:50%;transform:translateY(-50%);width:460px;display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;">
+    <div class="card-beauty"><span style="font-size:2.8rem;display:block;margin-bottom:1rem;">🤗</span><h4>Mira AI Companion</h4><p>Always listening, never judging</p></div>
+    <div class="card-beauty"><span style="font-size:2.8rem;display:block;margin-bottom:1rem;">🌬️</span><h4>Guided Breathing</h4><p>Calm anxiety in minutes</p></div>
+    <div class="card-beauty"><span style="font-size:2.8rem;display:block;margin-bottom:1rem;">📓</span><h4>Private Journal</h4><p>Your thoughts stay safe</p></div>
+    <div class="card-beauty"><span style="font-size:2.8rem;display:block;margin-bottom:1rem;">📊</span><h4>Mood Tracker</h4><p>Watch your growth</p></div>
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-strip" style="background:var(--primary);padding:1rem 0;overflow:hidden;">
-  <div class="marquee-inner" style="display:flex;gap:3rem;white-space:nowrap;animation:marquee 30s linear infinite;">
-    <span class="marquee-item">Free Forever</span>
-    <span class="marquee-item">100% Anonymous</span>
-    <span class="marquee-item">India-Focused Support</span>
-    <span class="marquee-item">24/7 AI + Helplines</span>
-    <span class="marquee-item">Science-Backed Tools</span>
-    <!-- repeated for seamless loop -->
-    <span class="marquee-item">Free Forever</span>
-    <span class="marquee-item">100% Anonymous</span>
+<div style="background:var(--primary);padding:1rem 0;overflow:hidden;color:#fff;">
+  <div style="display:flex;gap:3rem;white-space:nowrap;animation:marquee 28s linear infinite;">
+    <span style="font-weight:600;">Free Forever • Anonymous • 24/7 Support • India Focused • Science Backed • No Account Needed</span>
+    <span style="font-weight:600;">Free Forever • Anonymous • 24/7 Support • India Focused • Science Backed • No Account Needed</span>
   </div>
 </div>
 
-<!-- DAILY AFFIRMATION -->
-<div class="daily-affirmation" style="background:linear-gradient(135deg,var(--primary),var(--primary2));padding:3rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
-  <!-- your original affirmation code here -->
-</div>
-
-<!-- AI CHAT SECTION - Smarter Mira -->
-<section class="page-section" id="chat-section" style="background:var(--bg2);">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start;">
+<!-- AI CHAT - Smarter Mira -->
+<section id="chat-section" class="page-section" style="background:var(--bg2);">
+  <div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;">
     <div>
-      <div class="s-label">Your AI Companion</div>
-      <h2 class="s-title">Talk to <em>Mira</em><br>anytime you need.</h2>
-      <p style="font-size:1.1rem;line-height:1.8;">Mira listens with kindness and helps you understand your feelings. She's available 24/7 and completely private.</p>
-      <div style="margin-top:2rem;padding:1.5rem;background:rgba(42,122,75,0.08);border-radius:16px;border-left:5px solid var(--primary);">
-        <strong>Important:</strong> Mira is an AI companion, not a licensed therapist. For immediate crisis support, use the helplines below.
+      <div class="s-label">Your Gentle Companion</div>
+      <h2 class="s-title">Talk to <em>Mira</em><br>whenever you need</h2>
+      <p style="font-size:1.12rem;line-height:1.85;">Mira is an empathetic AI who listens without judgment and helps you process feelings with care.</p>
+      <div style="margin-top:2rem;padding:1.6rem;background:rgba(42,122,75,0.08);border-radius:16px;border-left:5px solid var(--primary);">
+        <strong>Note:</strong> Mira is an AI companion, not a licensed therapist. For crisis support, use the helplines in the Resources section.
       </div>
     </div>
-    <div class="chat-box card-beauty" style="height:640px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px var(--shadow);">
-      <div class="chat-header" style="padding:1.4rem 1.6rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(42,122,75,0.15),rgba(76,175,114,0.08));">
-        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:1.6rem;">🤗</div>
+
+    <div class="card-beauty" style="height:650px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px var(--shadow);">
+      <div style="padding:1.4rem 1.6rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(42,122,75,0.15),rgba(76,175,114,0.08));display:flex;align-items:center;gap:1rem;">
+        <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🤗</div>
         <div>
-          <h4 style="margin:0;">Mira • Always Here</h4>
-          <div style="display:flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--accent);"><div style="width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pdot 2s infinite;"></div>Online for you</div>
+          <h4>Mira • Always Here for You</h4>
+          <div style="color:var(--accent);font-size:0.95rem;">● Online • Ready to listen</div>
         </div>
       </div>
-      <div id="chatMsgs" style="flex:1;overflow-y:auto;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;background:var(--card2);"></div>
-      <div style="padding:1.2rem;border-top:1px solid var(--border);background:var(--card);display:flex;gap:0.8rem;">
-        <input id="chatInp" type="text" placeholder="How are you feeling today?" style="flex:1;background:var(--surface);border:1.5px solid var(--border2);padding:1rem 1.4rem;border-radius:12px;outline:none;font-size:1.02rem;" onkeydown="if(event.key==='Enter')sendMsg()">
-        <button onclick="sendMsg()" style="background:var(--primary);color:#fff;border:none;width:52px;height:52px;border-radius:12px;font-size:1.3rem;cursor:pointer;">➤</button>
+      <div id="chatMsgs" style="flex:1;padding:1.6rem;overflow-y:auto;background:var(--card2);display:flex;flex-direction:column;gap:1rem;"></div>
+      <div style="padding:1.2rem;background:var(--card);border-top:1px solid var(--border);display:flex;gap:0.8rem;">
+        <input id="chatInp" type="text" placeholder="How are you feeling right now?" style="flex:1;background:var(--surface);border:1.5px solid var(--border);padding:1rem 1.4rem;border-radius:12px;outline:none;" onkeydown="if(event.key==='Enter') sendMsg()">
+        <button onclick="sendMsg()" style="width:52px;height:52px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:1.4rem;cursor:pointer;">➤</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Continue with your other sections (about, breathe, reframe, quiz, journal, mood, tips, community, testimonials, resources, contact) -->
-<!-- For all cards (conditions, steps, science, tips, affirmations, testimonials, resources, tiers), add class="card-beauty" -->
-
-<!-- RESOURCES SECTION - Updated Helplines -->
-<section class="page-section" id="resources">
-  <div class="emergency-banner card-beauty" style="margin-bottom:3rem;">
+<!-- RESOURCES - Updated Helplines -->
+<section id="resources" class="page-section">
+  <div class="card-beauty" style="margin-bottom:3rem;padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;">
     <div>
-      <strong style="font-size:1.25rem;">🆘 In Crisis? Help is Available 24/7</strong>
-      <p style="margin-top:0.5rem;">Free, confidential support in multiple languages.</p>
+      <strong style="font-size:1.35rem;">🆘 Need Immediate Help?</strong>
+      <p style="margin-top:0.6rem;max-width:420px;">Free, confidential, 24/7 support is available right now. You are not alone.</p>
     </div>
     <div style="text-align:right;">
-      <div style="color:var(--primary);font-weight:700;">Tele MANAS (Govt. of India)</div>
-      <div style="font-size:2.8rem;font-weight:700;color:var(--primary);">14416</div>
-      <div style="font-size:1.1rem;">or 1-800-891-4416</div>
+      <div style="color:var(--primary);font-weight:700;">Tele MANAS (Government of India)</div>
+      <div style="font-size:3rem;font-weight:700;color:var(--primary);">14416</div>
+      <div style="font-size:1.2rem;">or 1-800-891-4416</div>
     </div>
   </div>
 
-  <!-- Your resources grid with updated numbers -->
-  <!-- iCall: 022-25521111 or 9152987821 -->
-  <!-- AASRA: 022-27546669 -->
-  <!-- Vandrevala: +91 9999666555 -->
+  <!-- Add your other sections (About, Breathe, Quiz, Journal, Mood, Community, etc.) here using .card-beauty class for every card -->
+
 </section>
 
 <script>
 // Smarter Mira Chat
 const chatMsgs = document.getElementById('chatMsgs');
+
 function addMsg(text, type) {
   const div = document.createElement('div');
-  div.className = `msg ${type}`;
-  div.style.padding = '1rem 1.4rem';
-  div.style.borderRadius = type === 'user' ? '12px 3px 12px 12px' : '3px 12px 12px 12px';
-  div.style.maxWidth = '85%';
+  div.style.padding = '1.1rem 1.5rem';
+  div.style.borderRadius = type === 'user' ? '18px 4px 18px 18px' : '4px 18px 18px 18px';
+  div.style.maxWidth = '82%';
   div.style.alignSelf = type === 'user' ? 'flex-end' : 'flex-start';
   div.style.background = type === 'user' ? 'var(--primary)' : 'var(--surface)';
-  div.style.color = type === 'user' ? '#fff' : 'var(--text2)';
+  div.style.color = type === 'user' ? '#fff' : 'var(--text)';
   div.textContent = text;
   chatMsgs.appendChild(div);
   chatMsgs.scrollTop = chatMsgs.scrollHeight;
 }
 
 function showTyping() {
-  const typing = document.createElement('div');
-  typing.id = 'typing';
-  typing.className = 'msg';
-  typing.style.alignSelf = 'flex-start';
-  typing.innerHTML = `<div style="display:flex;gap:6px;"><span style="width:7px;height:7px;background:var(--muted);border-radius:50%;animation:dp 1.2s infinite;"></span><span style="width:7px;height:7px;background:var(--muted);border-radius:50%;animation:dp 1.2s infinite 0.2s;"></span><span style="width:7px;height:7px;background:var(--muted);border-radius:50%;animation:dp 1.2s infinite 0.4s;"></span></div>`;
-  chatMsgs.appendChild(typing);
+  const typingDiv = document.createElement('div');
+  typingDiv.id = 'typingIndicator';
+  typingDiv.style.alignSelf = 'flex-start';
+  typingDiv.innerHTML = `<div style="display:flex;gap:6px;padding:1rem 1.4rem;background:var(--surface);border-radius:18px;"><span style="width:7px;height:7px;background:#666;border-radius:50%;animation:dot 1.2s infinite;"></span><span style="width:7px;height:7px;background:#666;border-radius:50%;animation:dot 1.2s infinite 0.2s;"></span><span style="width:7px;height:7px;background:#666;border-radius:50%;animation:dot 1.2s infinite 0.4s;"></span></div>`;
+  chatMsgs.appendChild(typingDiv);
   chatMsgs.scrollTop = chatMsgs.scrollHeight;
 }
 
 function removeTyping() {
-  const t = document.getElementById('typing');
+  const t = document.getElementById('typingIndicator');
   if (t) t.remove();
 }
 
 function sendMsg() {
-  const inp = document.getElementById('chatInp');
-  const val = inp.value.trim();
-  if (!val) return;
-  addMsg(val, 'user');
-  inp.value = '';
+  const input = document.getElementById('chatInp');
+  const message = input.value.trim();
+  if (!message) return;
+
+  addMsg(message, 'user');
+  input.value = '';
   showTyping();
 
   setTimeout(() => {
     removeTyping();
-    let response = "Thank you for sharing. I'm listening with care. What else is on your mind? 💚";
+    let reply = "Thank you for trusting me with that. I'm here and listening with care. 💚 Tell me more if you'd like.";
 
-    const lower = val.toLowerCase();
+    const lower = message.toLowerCase();
+
     if (lower.includes('anxi') || lower.includes('worry') || lower.includes('panic') || lower.includes('nervous')) {
-      response = "Anxiety can feel so heavy — especially with studies, work or family expectations. You're not alone. Let's breathe together: Inhale 4... hold 4... exhale slowly for 6. How does your body feel right now?";
-    } else if (lower.includes('sleep') || lower.includes('insomnia') || lower.includes('tired') || lower.includes('can't sleep')) {
-      response = "Sleep issues make everything harder. Try writing down your worries for 5 minutes before bed, then set them aside. Would you like a quick 4-7-8 breathing guide?";
-    } else if (lower.includes('overwhelm') || lower.includes('too much') || lower.includes('stressed')) {
-      response = "It sounds like you're carrying a lot. One step at a time is okay. What's the biggest thing on your mind right now? We can gently unpack it.";
+      reply = "Anxiety can feel overwhelming — especially with studies, work, or family expectations in India. You're not alone. Let's try a gentle breath: Inhale for 4, hold for 4, exhale slowly for 6. How does your body feel right now?";
+    } else if (lower.includes('sleep') || lower.includes('insomnia') || lower.includes("can't sleep") || lower.includes('tired')) {
+      reply = "Sleep struggles make everything harder. Many people face this. Try writing your worries on paper before bed and setting them aside. Would you like a simple 4-7-8 breathing technique to help you relax?";
+    } else if (lower.includes('overwhelm') || lower.includes('too much') || lower.includes('stressed') || lower.includes('burnout')) {
+      reply = "It sounds like you're carrying a heavy load. One small step at a time is enough. What's the biggest thing weighing on you right now? We can gently break it down together.";
     } else if (lower.includes('family') || lower.includes('parents') || lower.includes('pressure')) {
-      response = "Family expectations are very real for many of us. You're allowed to have your own path while still caring for them. How has this been affecting you?";
-    } else if (lower.includes('exam') || lower.includes('study') || lower.includes('test') || lower.includes('board')) {
-      response = "Exams can feel like the whole future depends on them. Remember: one result doesn't define your worth. You've got this — and even if it feels tough, you can try again. Want study anxiety tips?";
-    } else if (lower.includes('lonely') || lower.includes('alone') || lower.includes('no one')) {
-      response = "Feeling lonely hurts deeply. Reaching out here is already a brave step. You're not alone in feeling this. Would you like to talk about what's been making you feel disconnected?";
+      reply = "Family expectations are very common and can feel intense. You're allowed to have your own feelings and dreams. How has this been affecting you lately?";
+    } else if (lower.includes('exam') || lower.includes('study') || lower.includes('test') || lower.includes('board') || lower.includes('result')) {
+      reply = "Exams can feel like the whole world depends on them. Remember: one result does not define your worth. You've already taken a brave step by reaching out. Want practical tips for exam anxiety?";
+    } else if (lower.includes('lonely') || lower.includes('alone') || lower.includes('no one') || lower.includes('isolated')) {
+      reply = "Feeling lonely is painful, and reaching out here shows strength. You're not alone in this feeling. Would you like to talk about what's been making you feel disconnected?";
+    } else if (lower.includes('job') || lower.includes('work') || lower.includes('career')) {
+      reply = "Work or career stress is incredibly common. It's okay to feel uncertain. What part of it feels the heaviest right now?";
     }
 
-    addMsg(response, 'bot');
-  }, 1400);
+    addMsg(reply, 'bot');
+  }, 1350);
 }
 
-// Add initial message
+// Initial greeting
 window.addEventListener('load', () => {
-  addMsg("Hi, I'm Mira 💚 This is a safe space. How are you feeling today?", 'bot');
+  setTimeout(() => {
+    addMsg("Hi, I'm Mira 💚 This is a safe, judgment-free space. How are you feeling today?", 'bot');
+  }, 800);
 });
 
-// Keep your existing scripts for breathing, journal, quiz, etc.
-// For all other cards, simply add class="card-beauty" where appropriate.
-
+// Add your other scripts (breathing, journal, quiz, checklist, mood chart, etc.) from the original code here
 </script>
 </body>
 </html>
