@@ -7,36 +7,72 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
+/* ─── SAGE GREEN & CREAM PALETTE OVERRIDE ─── */
 :root {
-  --bg:         #FAF7FF;
---bg2:        #F3EEFF;
---surface:    #E8DEFF;
---surface2:   #D4B8F0;
---card:       #FFFFFF;
---card2:      #F8F4FF;
---text:       #2D1F45;
---text2:      #3D2D5C;
---muted:      #8B78B0;
---primary:    #7B5EA7;
---primary2:   #5B3E8A;
---accent:     #C084C8;
---accent2:    #A060A8;
---terra:      #C060A0;
---sage:       #2D9E75;
---sage2:      #1D7A52;
---clay:       #B88EC8;
---warm:       #D4B8F0;
---cream:      #F3EEFF;
---forest:     #1D4A3A;
---gold:       #C8962A;
---warn:       #B03A2E;
---border:     rgba(123,94,167,0.12);
---border2:    rgba(123,94,167,0.25);
---glow:       rgba(123,94,167,0.18);
---glow2:      rgba(192,132,200,0.18);
---shadow:     rgba(45,31,69,0.10);
-  --nav-h:     72px;
+  --bg:         #F6F9F2;
+  --bg2:        #EDF4E6;
+  --surface:    #DEF0D4;
+  --surface2:   #C2D9B0;
+  --card:       #FFFFFF;
+  --card2:      #F2F7EE;
+  --text:       #1A2B16;
+  --text2:      #283D22;
+  --muted:      #607A58;
+  --primary:    #4A7C52;
+  --primary2:   #2C5934;
+  --accent:     #76AE7E;
+  --accent2:    #548F5C;
+  --terra:      #C87840;
+  --sage:       #4A7C52;
+  --sage2:      #2C5934;
+  --clay:       #9EC89A;
+  --warm:       #D2E8C8;
+  --cream:      #EEF5E8;
+  --forest:     #163020;
+  --gold:       #B89428;
+  --warn:       #B03A2E;
+  --border:     rgba(74,124,82,0.12);
+  --border2:    rgba(74,124,82,0.26);
+  --glow:       rgba(74,124,82,0.18);
+  --glow2:      rgba(118,174,126,0.18);
+  --shadow:     rgba(26,43,22,0.10);
+  --nav-h:      72px;
   --card-radius: 18px;
+}
+ 
+nav { background: rgba(44,89,52,0.96) !important; border-bottom-color: rgba(255,255,255,0.08) !important; }
+.mobile-menu { background: rgba(44,89,52,0.98) !important; }
+.logo-dot { background: #D6EDD0 !important; box-shadow: 0 0 10px rgba(214,237,208,0.7) !important; }
+.logo span, .logo { color: #D6EDD0 !important; }
+.logo { color: #fff !important; }
+.nav-pill { background: var(--cream) !important; color: var(--primary2) !important; }
+.nav-pill:hover { background: var(--terra) !important; color: #fff !important; }
+.marquee-strip { background: var(--primary) !important; border-top-color: var(--primary2) !important; border-bottom-color: var(--primary2) !important; }
+.daily-affirmation { background: linear-gradient(135deg, var(--primary), var(--primary2)) !important; }
+.hero-badge { background: rgba(74,124,82,0.08) !important; border-color: rgba(74,124,82,0.22) !important; color: var(--primary) !important; }
+.badge-dot { background: var(--accent) !important; box-shadow: 0 0 8px var(--glow2) !important; }
+.br-progress { stroke: var(--primary) !important; filter: drop-shadow(0 0 8px rgba(74,124,82,0.4)) !important; }
+.breathe-inner { background: radial-gradient(circle, rgba(118,174,126,0.15), rgba(74,124,82,0.04)) !important; border-color: rgba(74,124,82,0.2) !important; }
+.breathe-inner.expanding { background: radial-gradient(circle, rgba(118,174,126,0.25), rgba(74,124,82,0.06)) !important; box-shadow: 0 0 55px rgba(118,174,126,0.25) !important; }
+.breathe-inner.holding { background: radial-gradient(circle, rgba(180,160,42,0.2), rgba(180,160,42,0.04)) !important; border-color: rgba(180,160,42,0.4) !important; }
+.breathe-inner.contracting { background: radial-gradient(circle, rgba(74,124,82,0.15), rgba(74,124,82,0.03)) !important; border-color: rgba(74,124,82,0.3) !important; }
+.hv-card.featured { background: linear-gradient(145deg, rgba(74,124,82,0.10), rgba(118,174,126,0.05), var(--card)) !important; border-color: var(--primary) !important; }
+.tier-card.featured { border-color: var(--primary) !important; background: linear-gradient(160deg, rgba(74,124,82,0.06), var(--card)) !important; }
+.tier-card.featured::before { background: var(--primary) !important; }
+.pulse-cta { background: linear-gradient(135deg, var(--primary), var(--primary2)) !important; }
+.daily-affirmation { background: linear-gradient(135deg, var(--primary), var(--primary2)) !important; }
+.chat-header { background: linear-gradient(135deg, rgba(74,124,82,0.10), rgba(118,174,126,0.06)) !important; }
+.reframe-new { color: var(--primary2) !important; border-left-color: var(--primary) !important; }
+.med-fill { stroke: var(--primary) !important; filter: drop-shadow(0 0 8px rgba(74,124,82,0.35)) !important; }
+footer { background: #163020 !important; }
+.footer-col h5 { color: var(--warm) !important; }
+.footer-col a { color: rgba(214,237,208,0.45) !important; }
+.footer-col a:hover { color: var(--cream) !important; }
+.footer-bottom p { color: rgba(214,237,208,0.28) !important; }
+.footer-social { background: rgba(214,237,208,0.07) !important; border-color: rgba(214,237,208,0.12) !important; }
+.footer-social:hover { background: rgba(214,237,208,0.16) !important; border-color: var(--cream) !important; }
+.footer-brand p { color: rgba(214,237,208,0.45) !important; }
+
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
